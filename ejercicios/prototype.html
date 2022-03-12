@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    // const zelda = {
+    //     name: "Zelda"
+    // }
+
+    // const link = {
+    //     name: "Link"
+    // }
+
+    // zelda.saludar= function(){
+    //     console.log(`Hola soy ${this.name}`)
+    // }
+
+    // link.saludar=function(){
+    //     console.log(`Hola soy ${this.name}`)
+    // }
+
+    // zelda.saludar();
+    // link.saludar();
+
+    // con un poco de efciencia
+
+    // function Hero(name){
+    // const hero = {
+    //     name:name
+    // }
+    // hero.saludar = function(){
+    //     console.log(`Hola soy ${this.name}`)
+    // }
+    // return hero
+    // }
+    // const zelda = Hero("Zelda")
+    // zelda.saludar();
+
+    // const link = Hero("Link")
+    // link.saludar();
+
+    //optimizar el codigo
+
+    // const heroMethods = {
+    //     saludar: function() {
+    //         console.log(`Soy ${this.name}`);
+    //     },
+    // };
+
+    // function Hero(name){
+    // const hero = {
+    //     name:name,
+    // };
+    // hero.saludar = heroMethods.saludar;
+    // return hero;
+    // }
+
+
+    // const zelda = Hero("Zelda")
+    // zelda.saludar();
+
+    // const link = Hero("Link")
+    // link.saludar();
+
+    //copia de un objeto por object create
+    // const heroMethods = {
+    //     saludar: function() {
+    //         console.log(`Soy ${this.name}`);
+    //     },
+    // };
+
+    // function Hero(name){
+    // const hero = Object.create(heroMethods)
+    // hero.name=name;
+    // return hero;
+    // }
+
+
+    // const zelda = Hero("Zelda")
+    // zelda.saludar();
+
+    // const link = Hero("Link")
+    // link.saludar();
+
+
+    //iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+    
+    // function Hero(name){
+    // const hero = Object.create(Hero.prototype);
+    // hero.name=name;
+    // return hero;
+    // }
+
+    // Hero.prototype.saludar = function(){
+    //     console.log(`superheroe! ${this.name}`);
+    // }
+
+
+    // const zelda = Hero("Zelda")
+    // zelda.saludar();
+
+    // const link = Hero("Link")
+    // link.saludar();
+
+    //yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+    function Hero(name){
+   //const hero = Object.create(Hero.prototype);
+    this.name=name;
+   // return this;
+    }
+
+    Hero.prototype.saludar = function(){
+        console.log(`NEW! ${this.name}`);
+    }
+
+    const zelda = new Hero("Zelda")
+    zelda.saludar();
+
+    const link =new Hero("Link")
+    link.saludar();
+
+
+
+</script>
+
+</body>
+</html>
